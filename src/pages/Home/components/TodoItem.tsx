@@ -11,11 +11,11 @@ const TodoItem = ({ item }: TodoItemProps) => {
 
   const { id, checked, title } = item
   return (
-    <div className="w-25% h-80px border border-solid border-#27557d m-1em flex justify-start rounded-md pl-2em box-border">
-      <input type="checkbox" id={id} defaultChecked={checked} />
+    <div className="w-30% border border-solid border-l-solid border-l-#27557d border-l-5 border-#27557d m-1em flex justify-start items-center rounded-md p-x-1em p-y-.5em box-border m-h-100px">
+      <input type="checkbox" id={'chk' + id} defaultChecked={checked} />
       <label
-        className="ml-.5em flex items-center font-size-5"
-        htmlFor={id}
+        className="text-left ml-1em font-size-5 whitespace-break-spaces text-ellipsis overflow-hidden"
+        htmlFor={'chk' + id}
         title={title}
       >
         {title || 'untitled'}
