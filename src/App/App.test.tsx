@@ -8,4 +8,10 @@ describe('App', () => {
     render(<App />)
     expect(screen).toBeDefined()
   })
+
+  test('App has a title', () => {
+    render(<App />)
+    const titleElement = screen.getByRole('heading')
+    expect(titleElement).toBeDefined()
+  })
 })

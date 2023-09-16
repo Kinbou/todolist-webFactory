@@ -1,0 +1,32 @@
+[
+  {
+    "id": "1",
+    "title": "PikachuPikachuPikachuPikachuPikachuPikachuPikachuPikachuPikachuPikachu",
+    "checked": true
+  },
+  {
+    "id": "0",
+    "title": "Dark & light theme",
+    "checked": false
+  },
+  {
+    "id": "2",
+    "title": "",
+    "checked": false
+  },
+  {
+    "id": "3",
+    "title": "Drag & Drop",
+    "checked": false
+  },
+  {
+    "id": "4",
+    "title": "Remove todo",
+    "checked": false
+  },
+  {
+    "id": "5",
+    "title": "Manage multiple lists",
+    "checked": false
+  }
+]
