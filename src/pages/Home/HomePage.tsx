@@ -1,6 +1,6 @@
 import { useId } from 'react'
 import TodoList from './components/TodoList'
-import { Todo } from '../../models/Todo'
+import { Todo } from '@models/Todo'
 
 const HomePage = () => {
   const listItems: Todo[] = [

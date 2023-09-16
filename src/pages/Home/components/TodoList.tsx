@@ -1,5 +1,5 @@
 import TodoItem from './TodoItem'
-import { Todo } from '../../../models/Todo'
+import { Todo } from '@models/Todo'
 
 interface TodoListProps {
   items: Todo[]
