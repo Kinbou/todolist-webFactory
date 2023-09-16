@@ -1,26 +1,12 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-
-import './App.css'
+import HomePage from '../pages/Home/HomePage'
 
 function App() {
-  const [count, setCount] = useState(0)
-
-  if (true) {
-    // return true
-  }
-
   return (
     <>
-      <div>
-        <h1>TODOLIST</h1>
-      </div>
-      <h1 className="text-red">Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
+      {' '}
+      <div className="flex flex-col center items-center">
+        <h1 className="mt-2em text-4xl">Todo App</h1>
+        <HomePage />
       </div>
     </>
   )
