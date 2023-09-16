@@ -1,39 +1,20 @@
-import { useId } from 'react'
+import { useContext, useEffect } from 'react'
+
 import TodoList from './components/TodoList'
-import { Todo } from '@models/Todo'
+import { TodoContext } from '@/contexts/todo-context'
+import { getTodos } from '@/services/todo-service'
 
 const HomePage = () => {
-  const listItems: Todo[] = [
-    {
-      id: useId(),
-      title: 'Pikachu',
-      checked: true,
-    },
-    {
-      id: useId(),
-      title: '',
-      checked: false,
-    },
-    {
-      id: useId(),
-      title: 'Drag & Drop',
-      checked: false,
-    },
-    {
-      id: useId(),
-      title: 'Remove todo',
-      checked: false,
-    },
-    {
-      id: useId(),
-      title: 'Manage multiple lists',
-      checked: false,
-    },
-  ]
+  const { updateTodoList, todoList } = useContext(TodoContext)
+
+  useEffect(() => {
+    const result = getTodos()
+    updateTodoList(result)
+  }, [updateTodoList])
 
   return (
     <div className="w-100% text-center flex flex-col items-center">
-      <TodoList items={listItems} />
+      <TodoList items={todoList} />
     </div>
   )
 }
