@@ -13,7 +13,7 @@ const TodoList = ({ items }: TodoListProps) => {
       {items.length > 0 ? (
         items.map((item) => <TodoItem key={item.id} item={item} />)
       ) : (
-        <div>You have nothing to do. Add new items</div>
+        <div id="no-data">You have nothing to do. Add new items</div>
       )}
     </>
   )
