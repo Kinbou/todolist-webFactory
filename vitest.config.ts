@@ -8,6 +8,11 @@ export default mergeConfig(
     test: {
       globals: true,
       environment: 'jsdom',
+      reporters: ['default', 'html'],
+      coverage: {
+        enabled: true,
+        reporter: ['text', 'json', 'html'],
+      },
     },
   }),
 )

@@ -2,7 +2,7 @@ import { useContext, useEffect } from 'react'
 
 import TodoList from './components/TodoList'
 import { TodoContext } from '@/contexts/todo-context'
-import { getTodos, sortTodos } from '@/services/todo-service'
+import { getSortedTodos, sortTodos } from '@/services/todo-service'
 
 const HomePage = () => {
   const { updateTodoList, todoList } = useContext(TodoContext)
@@ -16,7 +16,7 @@ const HomePage = () => {
   }
 
   useEffect(() => {
-    const todoList = getTodos()
+    const todoList = getSortedTodos()
     updateTodoList(todoList)
   }, [])
 

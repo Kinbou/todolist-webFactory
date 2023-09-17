@@ -7,6 +7,9 @@ export const sortTodos = (a: Todo, b: Todo): number => {
 
 export const getTodos = (): Todo[] => {
   const todoList = todos as Todo[]
-  const sortedResult = todoList.sort(sortTodos)
-  return sortedResult
+  return todoList
+}
+
+export const getSortedTodos = (): Todo[] => {
+  return getTodos().sort(sortTodos)
 }
