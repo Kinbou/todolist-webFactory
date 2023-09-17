@@ -28,5 +28,10 @@
     "id": "5",
     "title": "Manage multiple lists",
     "checked": false
+  },
+  {
+    "id": "6",
+    "title": "toaster",
+    "checked": false
   }
 ]
