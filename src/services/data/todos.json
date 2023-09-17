@@ -1,8 +1,9 @@
 [
   {
     "id": "33e8d088-77ef-4c28-9163-d989c956f2a4",
-    "title": "Text overflow test : PikachuPikachuPikachuPikachuPikachuPikachuPikachuPikachuPikachuPikachu",
-    "checked": true
+    "title": "Text overflow test : Pikachu",
+    "checked": true,
+    "description": "Attraper les tous"
   },
   {
     "id": "65265ae0-5e7f-416d-81b7-d220306cb8cb",
