@@ -45,7 +45,6 @@ const TodoDetails = ({ todo }: { todo: Todo | undefined }): ReactNode => {
 
 const TodoPage = () => {
   const { todoId } = useParams()
-  console.log('location', location)
   return (
     <div className="min-w-40% max-w-90% my-2rem  py-4rem flex justify-center rounded-md bg-#212226">
       <TodoDetails todo={getTodo(todoId)} />
