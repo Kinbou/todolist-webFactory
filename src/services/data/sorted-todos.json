@@ -1,10 +1,5 @@
 [
   {
-    "id": "1",
-    "title": "Text overflow test : PikachuPikachuPikachuPikachuPikachuPikachuPikachuPikachuPikachuPikachu",
-    "checked": true
-  },
-  {
     "id": "0",
     "title": "Dark & light theming",
     "checked": false
@@ -38,5 +33,10 @@
     "id": "7",
     "title": "CSS animations (fadeIn, slideIn...)",
     "checked": false
+  },
+  {
+    "id": "1",
+    "title": "Text overflow test : PikachuPikachuPikachuPikachuPikachuPikachuPikachuPikachuPikachuPikachu",
+    "checked": true
   }
 ]

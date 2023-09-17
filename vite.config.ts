@@ -8,13 +8,10 @@ export default defineConfig({
   resolve: {
     alias: {
       '@components': '/src/components',
+      '@services': '/src/services',
       '@models': '/src/models',
       '@pages': '/src/pages',
       '@': '/src',
     },
-  },
-  test: {
-    globals: true,
-    environment: 'jsdom',
   },
 })
