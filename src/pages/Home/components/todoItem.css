@@ -1,0 +1,7 @@
+.todoItem:hover > .todoActions  {
+  display: block;
+} 
+
+.todoItem:hover > .todoActions > div:first-child{
+  background-color: #242424;
+} 

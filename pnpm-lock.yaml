@@ -1,12 +1,14 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@iconify-json/carbon': ^1.1.21
   '@testing-library/react': ^14.0.0
   '@types/jest': ^29.5.4
   '@types/react': ^18.2.15
   '@types/react-dom': ^18.2.7
   '@typescript-eslint/eslint-plugin': ^6.7.0
   '@typescript-eslint/parser': ^6.0.0
+  '@unocss/preset-icons': ^0.55.7
   '@vitejs/plugin-react': ^4.0.3
   '@vitest/coverage-v8': ^0.34.4
   '@vitest/ui': ^0.34.4
@@ -37,12 +39,14 @@ dependencies:
   react-router-dom: 6.16.0_biqbaboplfbrettd7655fr4n2y
 
 devDependencies:
+  '@iconify-json/carbon': 1.1.21
   '@testing-library/react': 14.0.0_biqbaboplfbrettd7655fr4n2y
   '@types/jest': 29.5.4
   '@types/react': 18.2.21
   '@types/react-dom': 18.2.7
   '@typescript-eslint/eslint-plugin': 6.7.0_upusunw4marwma72j5kmgdi4ee
   '@typescript-eslint/parser': 6.7.0_rngtr6f3b25lvetpihwplgecf4
+  '@unocss/preset-icons': 0.55.7
   '@vitejs/plugin-react': 4.0.4_vite@4.4.9
   '@vitest/coverage-v8': 0.34.4_vitest@0.34.4
   '@vitest/ui': 0.34.4_vitest@0.34.4
@@ -568,6 +572,12 @@ packages:
 
   /@humanwhocodes/object-schema/1.2.1:
     resolution: {integrity: sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==}
+    dev: true
+
+  /@iconify-json/carbon/1.1.21:
+    resolution: {integrity: sha512-bK2cMVM4noBU+FGlay433flpXLRzQu0ED095iAnoO6ka3yb4uz0lvb8acpN5gthyGLJ89C4HpfIbQZLQnMKQww==}
+    dependencies:
+      '@iconify/types': 2.0.0
     dev: true
 
   /@iconify/types/2.0.0:

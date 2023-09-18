@@ -2,6 +2,9 @@ import { useNavigate } from 'react-router-dom'
 import cx from 'classnames'
 
 import { Todo } from '@models/Todo'
+import TodoActions from './TodoActions'
+
+import './todoItem.css'
 
 interface TodoItemProps {
   item: Todo
@@ -23,12 +26,11 @@ const TodoItem = ({ item, toggleState }: TodoItemProps) => {
   return (
     <div
       className={cx(
-        'w-30% border border-solid border-l-solid border-l-#27557d border-l-5 border-#27557d m-1em flex justify-start items-center rounded-md p-x-1em p-y-.5em box-border m-h-100px',
+        'todoItem w-30% border border-solid border-l-solid border-l-#27557d border-l-5 border-#27557d m-1em flex justify-start items-center rounded-md p-x-1em p-y-.5em box-border m-h-100px relative ',
         {
           'line-through border-l-green': item.checked,
         },
       )}
-      onClick={goToTodoDetail}
     >
       <input
         type="checkbox"
@@ -49,6 +51,9 @@ const TodoItem = ({ item, toggleState }: TodoItemProps) => {
       >
         {title || 'untitled'}
       </label>
+      <div className="hidden todoActions">
+        <TodoActions goToTodoDetail={goToTodoDetail} />
+      </div>
     </div>
   )
 }
