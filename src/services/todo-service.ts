@@ -13,3 +13,8 @@ export const getTodos = (): Todo[] => {
 export const getSortedTodos = (): Todo[] => {
   return getTodos().sort(sortTodos)
 }
+
+export const getTodo = (id: string): Todo | undefined => {
+  const todo = todos.find((todo) => todo.id === id)
+  return todo
+}

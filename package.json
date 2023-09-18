@@ -8,7 +8,6 @@
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "lint:staged": "eslint --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "test:staged": "vitest run",
     "format": "eslint --fix src/**/*.tsx",
     "prepare": "husky install",
     "preview": "vite preview",
@@ -16,20 +15,24 @@
     "test": "vitest run",
     "test:ui": "vitest --ui",
     "test:coverage": "vitest run --coverage",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "test:staged": "vitest run"
   },
   "dependencies": {
     "classnames": "^2.3.2",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.16.0"
   },
   "devDependencies": {
+    "@iconify-json/carbon": "^1.1.21",
     "@testing-library/react": "^14.0.0",
     "@types/jest": "^29.5.4",
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
     "@typescript-eslint/eslint-plugin": "^6.7.0",
     "@typescript-eslint/parser": "^6.0.0",
+    "@unocss/preset-icons": "^0.55.7",
     "@vitejs/plugin-react": "^4.0.3",
     "@vitest/coverage-v8": "^0.34.4",
     "@vitest/ui": "^0.34.4",

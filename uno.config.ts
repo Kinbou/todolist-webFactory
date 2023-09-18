@@ -7,6 +7,10 @@ export default defineConfig({
       extraProperties: {
         display: 'inline-block',
       },
+      collections: {
+        carbon: () =>
+          import('@iconify-json/carbon/icons.json').then((i) => i.default),
+      },
       scale: 1.2,
     }),
   ],

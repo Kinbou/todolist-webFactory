@@ -7,7 +7,9 @@ interface TodoListProps {
 }
 
 const TodoList = ({ items, toggleState }: TodoListProps) => {
-  if (!items) return
+  if (!items) {
+    return
+  }
 
   return (
     <>
