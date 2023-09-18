@@ -14,7 +14,7 @@ export const getSortedTodos = (): Todo[] => {
   return getTodos().sort(sortTodos)
 }
 
-export const getTodo = (id: string | undefined): Todo | undefined => {
-  const findTodo = todos.find((todo) => todo.id === id)
-  return findTodo
+export const getTodo = (id: string): Todo | undefined => {
+  const todo = todos.find((todo) => todo.id === id)
+  return todo
 }
