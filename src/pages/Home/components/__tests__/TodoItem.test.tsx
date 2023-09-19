@@ -23,7 +23,7 @@ describe('TodoItem', () => {
   test('Clicking an item triggers toogleState function', () => {
     render(<TodoItem item={todoItem} toggleState={toggleStateFn} />)
 
-    const todoChk = screen.getByTitle(todoItem.title)
+    const todoChk = screen.getByText(todoItem.title)
     todoChk.click()
 
     expect(toggleStateFn).toHaveBeenCalled()
