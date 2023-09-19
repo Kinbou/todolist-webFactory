@@ -4,6 +4,7 @@ import UnoCSS from 'unocss/vite'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: '/todolist-webFactory/',
   plugins: [react(), UnoCSS()],
   resolve: {
     alias: {
