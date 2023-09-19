@@ -10,11 +10,17 @@ export const getTodos = (): Todo[] => {
   return todoList
 }
 
-export const getSortedTodos = (): Todo[] => {
-  return getTodos().sort(sortTodos)
+export const getSortedTodos = (todoList?: Todo[]): Todo[] => {
+  const listTodo = todoList?.length ? todoList : (todos as Todo[])
+  return listTodo.sort(sortTodos)
 }
 
 export const getTodo = (id: string): Todo | undefined => {
   const todo = todos.find((todo) => todo.id === id)
   return todo
+}
+
+export const addTodo = (todo: Todo) => {
+  const newTodo = [todo, ...todos]
+  return newTodo
 }

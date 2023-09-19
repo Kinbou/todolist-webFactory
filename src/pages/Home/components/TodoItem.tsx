@@ -17,7 +17,7 @@ const TodoItem = ({ item, toggleState }: TodoItemProps) => {
     return
   }
 
-  const { id, checked, title } = item
+  const { id, checked, title, description } = item
 
   const goToTodoDetail = () => {
     navigate(`/todo/${id}`)
@@ -26,7 +26,7 @@ const TodoItem = ({ item, toggleState }: TodoItemProps) => {
   return (
     <div
       className={cx(
-        'todoItem w-30% border border-solid border-l-solid border-l-#27557d border-l-5 border-#27557d m-1em flex justify-start items-center rounded-md p-x-1em p-y-.5em box-border m-h-100px relative ',
+        'todoItem border border-solid border-l-solid border-l-#27557d border-l-5 border-#27557d m-1em flex justify-start items-center rounded-md p-x-1em p-y-.5em box-border m-h-100px relative w-100%',
         {
           'line-through border-l-green': item.checked,
         },
@@ -47,7 +47,7 @@ const TodoItem = ({ item, toggleState }: TodoItemProps) => {
           },
         )}
         htmlFor={'chk' + id}
-        title={title}
+        title={description}
       >
         {title || 'untitled'}
       </label>
