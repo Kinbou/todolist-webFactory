@@ -15,12 +15,20 @@ export const getSortedTodos = (todoList?: Todo[]): Todo[] => {
   return listTodo.sort(sortTodos)
 }
 
-export const getTodo = (id: string): Todo | undefined => {
-  const todo = todos.find((todo) => todo.id === id)
+export const getTodo = (id: string, newTodos?: Todo[]): Todo | undefined => {
+  const trueTodo = newTodos?.length ? newTodos : todos
+  const todo = trueTodo.find((todo) => todo.id === id)
   return todo
 }
 
 export const addTodo = (todo: Todo) => {
   const newTodo = [todo, ...todos]
   return newTodo
+}
+
+export const updateTodo = (todos: Todo[], todo: Todo): Todo[] => {
+  const index = todos.findIndex((item: Todo) => item.id === todo.id)
+  const copyTodos = [...todos]
+  copyTodos[index] = todo
+  return copyTodos
 }
