@@ -6,6 +6,7 @@ specifiers:
   '@types/jest': ^29.5.4
   '@types/react': ^18.2.15
   '@types/react-dom': ^18.2.7
+  '@types/uuid': ^9.0.4
   '@typescript-eslint/eslint-plugin': ^6.7.0
   '@typescript-eslint/parser': ^6.0.0
   '@unocss/preset-icons': ^0.55.7
@@ -31,6 +32,7 @@ specifiers:
   typescript: ^5.2.2
   unocss: ^0.55.7
   unocss-preset-theme: ^0.9.3
+  uuid: ^9.0.1
   vite: ^4.4.5
   vitest: ^0.34.4
 
@@ -39,6 +41,7 @@ dependencies:
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   react-router-dom: 6.16.0_biqbaboplfbrettd7655fr4n2y
+  uuid: 9.0.1
 
 devDependencies:
   '@iconify-json/carbon': 1.1.21
@@ -46,6 +49,7 @@ devDependencies:
   '@types/jest': 29.5.4
   '@types/react': 18.2.21
   '@types/react-dom': 18.2.7
+  '@types/uuid': 9.0.4
   '@typescript-eslint/eslint-plugin': 6.7.0_upusunw4marwma72j5kmgdi4ee
   '@typescript-eslint/parser': 6.7.0_rngtr6f3b25lvetpihwplgecf4
   '@unocss/preset-icons': 0.55.7
@@ -824,6 +828,10 @@ packages:
 
   /@types/stack-utils/2.0.1:
     resolution: {integrity: sha512-Hl219/BT5fLAaz6NDkSuhzasy49dwQS/DSdu4MdggFB8zcXv7vflBI3xp7FEmkmdDkBUI2bPUNeMttp2knYdxw==}
+    dev: true
+
+  /@types/uuid/9.0.4:
+    resolution: {integrity: sha512-zAuJWQflfx6dYJM62vna+Sn5aeSWhh3OB+wfUEACNcqUSc0AGc5JKl+ycL1vrH7frGTXhJchYjE1Hak8L819dA==}
     dev: true
 
   /@types/yargs-parser/21.0.0:
@@ -4190,6 +4198,11 @@ packages:
       querystringify: 2.2.0
       requires-port: 1.0.0
     dev: true
+
+  /uuid/9.0.1:
+    resolution: {integrity: sha512-b+1eJOlsR9K8HJpow9Ok3fiWOWSIcIzXodvv0rQjVoOVNpWMpxf1wZNpt4y9h10odCNrqnYp1OBzRktckBe3sA==}
+    hasBin: true
+    dev: false
 
   /v8-to-istanbul/9.1.0:
     resolution: {integrity: sha512-6z3GW9x8G1gd+JIIgQQQxXuiJtCXeAjp6RaPEPLv62mH3iPHPxV6W3robxtCzNErRo6ZwTmzWhsbNvjyEBKzKA==}
