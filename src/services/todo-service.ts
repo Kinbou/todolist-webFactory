@@ -32,3 +32,10 @@ export const updateTodo = (todos: Todo[], todo: Todo): Todo[] => {
   copyTodos[index] = todo
   return copyTodos
 }
+
+export const removeTodo = (todos: Todo[], idToDelete: string): Todo[] => {
+  const index = todos.findIndex((item: Todo) => item.id === idToDelete)
+  const copyTodos = [...todos]
+  copyTodos.splice(index, 1)
+  return copyTodos
+}

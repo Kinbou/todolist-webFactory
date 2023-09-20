@@ -8,7 +8,7 @@
   {
     "id": "65265ae0-5e7f-416d-81b7-d220306cb8cb",
     "title": "Dark & light theming",
-    "checked": false
+    "checked": true
   },
   {
     "id": "a85b6321-1679-46ce-85e6-f420a274c4c1",
@@ -23,7 +23,7 @@
   {
     "id": "11dfd91c-237b-4834-b0cf-65337a6192b8",
     "title": "Be able to delete todos",
-    "checked": false
+    "checked": true
   },
   {
     "id": "dc75af36-19ba-40a5-826e-1f632b722206",
