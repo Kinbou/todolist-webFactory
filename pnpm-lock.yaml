@@ -30,6 +30,7 @@ specifiers:
   react-router-dom: ^6.16.0
   typescript: ^5.2.2
   unocss: ^0.55.7
+  unocss-preset-theme: ^0.9.3
   vite: ^4.4.5
   vitest: ^0.34.4
 
@@ -65,6 +66,7 @@ devDependencies:
   prettier: 3.0.3
   typescript: 5.2.2
   unocss: 0.55.7_vite@4.4.9
+  unocss-preset-theme: 0.9.3
   vite: 4.4.9
   vitest: 0.34.4_pvtt2mwxcgvpmgpn72rglpdplm
 
@@ -4118,6 +4120,13 @@ packages:
   /universalify/2.0.0:
     resolution: {integrity: sha512-hAZsKq7Yy11Zu1DE0OzWjw7nnLZmJZYTDZZyEFHZdUhV8FkH5MCfoU1XMaxXovpyW5nq5scPqq0ZDP9Zyl04oQ==}
     engines: {node: '>= 10.0.0'}
+    dev: true
+
+  /unocss-preset-theme/0.9.3:
+    resolution: {integrity: sha512-pNu3YmSd47avFH+9lOKN4xHvrxHBQ+5dcC0XKNa2AHpOu/HtCCAGk8v1sdrkcENcPKciSyf6zULEG8N3c2Ilhw==}
+    dependencies:
+      '@unocss/core': 0.55.7
+      '@unocss/preset-mini': 0.55.7
     dev: true
 
   /unocss/0.55.7_vite@4.4.9:

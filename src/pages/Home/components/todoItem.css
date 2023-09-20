@@ -3,5 +3,5 @@
 } 
 
 .todoItem:hover > .todoActions > div:first-child{
-  background-color: #242424;
+  /* background-color: #242424; */
 } 
