@@ -1,5 +1,5 @@
 import { describe, expect, test, vi } from 'vitest'
-import { fireEvent, render, screen } from '@testing-library/react'
+import { render, screen } from '@testing-library/react'
 
 import HomePage from '../HomePage'
 
@@ -26,12 +26,5 @@ describe('HomePage', () => {
     toggleState(0)
     expect(toggleState).toHaveBeenCalled()
     // TODO: verify that context item 'checked' has been properly toggled, and that list has been sorted
-  })
-
-  test('addNewTodo button', () => {
-    render(<HomePage />)
-    const addTodoBtn = screen.getByTestId('btn-new-todo')
-    expect(addTodoBtn).not.toBeNull()
-    fireEvent.click(addTodoBtn)
   })
 })

@@ -4,6 +4,7 @@ import TodoList from './components/TodoList'
 import { TodoContext } from '@/contexts/todo-context'
 import { getSortedTodos, sortTodos } from '@/services/todo-service'
 import { useNavigate } from 'react-router-dom'
+import ButtonIcon from '@components/buttons/ButtonIcon'
 
 const HomePage = () => {
   const { updateTodoList, todoList } = useContext(TodoContext)
@@ -32,10 +33,11 @@ const HomePage = () => {
         <h1 id="app-title" className=" text-4xl ">
           Todo App
         </h1>
-        <button
+        <ButtonIcon
           data-testid="btn-new-todo"
-          className="i-carbon-add-alt w-40px h-40px hover:text-blue-900"
           onClick={addNewTodo}
+          iconName="i-carbon-add-alt"
+          styles="w-40px h-40px"
         />
       </div>
       <TodoList items={todoList} toggleState={toggleState} />
