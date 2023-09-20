@@ -6,6 +6,7 @@ import { Todo } from '@models/Todo'
 import { addTodo, updateTodo } from '@services/todo-service'
 import { TodoContext } from '@/contexts/todo-context'
 import Button from '@components/buttons/Button'
+import ButtonIcon from '@components/buttons/ButtonIcon'
 
 const TodoDetails = ({ todo }: { todo: Todo | undefined }): ReactNode => {
   const [title, setTitle] = useState<string>(todo?.title ?? '')
@@ -55,9 +56,10 @@ const TodoDetails = ({ todo }: { todo: Todo | undefined }): ReactNode => {
 
   return (
     <div className="min-w-40% max-w-90%rounded-md bg-#212226 flex flex-col items-center relative">
-      <button
-        className="i-carbon-arrow-left p-1em cursor-pointer absolute top-2.5em left-2em"
+      <ButtonIcon
+        iconName="i-carbon-arrow-left"
         onClick={goToHome}
+        styles="absolute top-2.5em left-2em p-1em"
       />
       <h1>{todo ? 'Modify Todo' : 'Add Todo'}</h1>
       <form
