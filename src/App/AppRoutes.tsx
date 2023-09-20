@@ -1,6 +1,4 @@
-import { useRoutes, HashRouter, Navigate } from 'react-router-dom'
-
-import TodoProvider from '@/contexts/todo-context'
+import { useRoutes, Navigate, HashRouter } from 'react-router-dom'
 
 import HomePage from '@pages/Home/HomePage'
 import Todo from '@pages/Todo/Todo'
@@ -8,19 +6,15 @@ import Todo from '@pages/Todo/Todo'
 const APP_ROUTES = [
   {
     path: '/',
-    element: (
-      <TodoProvider>
-        <HomePage />
-      </TodoProvider>
-    ),
+    element: <HomePage />,
   },
   {
     path: '/todo/:todoId',
-    element: (
-      <TodoProvider>
-        <Todo />
-      </TodoProvider>
-    ),
+    element: <Todo />,
+  },
+  {
+    path: '/todo/new',
+    element: <Todo />,
   },
   {
     path: '*',
@@ -31,8 +25,9 @@ const APP_ROUTES = [
 const RoutesComponent = () => useRoutes(APP_ROUTES)
 
 export const AppRoutes = () => {
+  const base = '' // import.meta.env.DEV ? '/' : '/todolist-webFactory/'
   return (
-    <HashRouter>
+    <HashRouter basename={base}>
       <RoutesComponent />
     </HashRouter>
   )
