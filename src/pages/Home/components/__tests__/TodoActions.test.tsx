@@ -5,18 +5,43 @@ import TodoActions from '../TodoActions'
 
 describe('TodoActions', () => {
   const goToTodoDetailFn = vi.fn()
+  const deleteTodoFn = vi.fn()
 
   test('Renders without crashing', () => {
-    render(<TodoActions goToTodoDetail={goToTodoDetailFn} />)
+    render(
+      <TodoActions
+        goToTodoDetail={goToTodoDetailFn}
+        deleteTodo={deleteTodoFn}
+      />,
+    )
     expect(screen).toBeDefined()
   })
 
-  test('Clicking an edit todo function', () => {
-    render(<TodoActions goToTodoDetail={goToTodoDetailFn} />)
+  test('Edit button click function call', () => {
+    render(
+      <TodoActions
+        goToTodoDetail={goToTodoDetailFn}
+        deleteTodo={deleteTodoFn}
+      />,
+    )
 
-    const editClick = screen.getByRole('button')
-    editClick.click()
+    const editBtn = screen.getByTitle('Edit')
+    editBtn.click()
 
     expect(goToTodoDetailFn).toHaveBeenCalled()
+  })
+
+  test('Delete button click function call an edit todo function', () => {
+    render(
+      <TodoActions
+        goToTodoDetail={goToTodoDetailFn}
+        deleteTodo={deleteTodoFn}
+      />,
+    )
+
+    const deleteBtn = screen.getByTitle('Remove')
+    deleteBtn.click()
+
+    expect(deleteTodoFn).toHaveBeenCalled()
   })
 })

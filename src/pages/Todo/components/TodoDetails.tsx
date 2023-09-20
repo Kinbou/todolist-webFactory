@@ -1,6 +1,6 @@
 import { ReactNode, SyntheticEvent, useContext, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-
+import { v4 as uuidv4 } from 'uuid'
 import { Todo } from '@models/Todo'
 import { addTodo, updateTodo } from '@services/todo-service'
 import { TodoContext } from '@/contexts/todo-context'
@@ -28,7 +28,7 @@ const TodoDetails = ({ todo }: { todo: Todo | undefined }): ReactNode => {
       description,
       title,
       checked: false,
-      id: 'qsqlkdjqs',
+      id: uuidv4(),
     })
     if (result) {
       updateTodoList(result)
@@ -38,7 +38,6 @@ const TodoDetails = ({ todo }: { todo: Todo | undefined }): ReactNode => {
 
   const handleEditTodo = (e: SyntheticEvent) => {
     e.preventDefault()
-    console.log('handleEditTodo')
     if (todo) {
       const result = updateTodo(todoList, {
         description,

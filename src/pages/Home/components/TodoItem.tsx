@@ -5,6 +5,9 @@ import { Todo } from '@models/Todo'
 import TodoActions from './TodoActions'
 
 import './todoItem.css'
+import { removeTodo } from '@services/todo-service'
+import { useContext } from 'react'
+import { TodoContext } from '@/contexts/todo-context'
 
 interface TodoItemProps {
   item: Todo
@@ -12,6 +15,7 @@ interface TodoItemProps {
 }
 
 const TodoItem = ({ item, toggleState }: TodoItemProps) => {
+  const { updateTodoList, todoList } = useContext(TodoContext)
   const navigate = useNavigate()
   if (!item) {
     return
@@ -21,6 +25,13 @@ const TodoItem = ({ item, toggleState }: TodoItemProps) => {
 
   const goToTodoDetail = () => {
     navigate(`/todo/${id}`)
+  }
+
+  const deleteTodo = () => {
+    const result = removeTodo(todoList, item.id)
+    if (result) {
+      updateTodoList(result)
+    }
   }
 
   return (
@@ -52,7 +63,7 @@ const TodoItem = ({ item, toggleState }: TodoItemProps) => {
         {title || 'untitled'}
       </label>
       <div className="hidden todoActions">
-        <TodoActions goToTodoDetail={goToTodoDetail} />
+        <TodoActions goToTodoDetail={goToTodoDetail} deleteTodo={deleteTodo} />
       </div>
     </div>
   )
